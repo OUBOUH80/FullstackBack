@@ -4,7 +4,7 @@ import com.example.crud.persistence.enteties.Student;
 
 import java.util.List;
 
-public interface StudenService {
+public interface StudentService {
     public Student saveStudent(Student student);
     public List<Student> getAllStudents();
 }

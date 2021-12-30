@@ -1,23 +1,22 @@
 package com.example.crud.persistence.enteties;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
-public class Course {
+public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
 
-    public Course(int id, String name) {
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Student student;
+    public Book(int id, String name) {
         this.id = id;
         this.name=name;
     }
 
-    public Course() {
+    public Book() {
     }
     public void setId(int id) {
         this.id = id;
@@ -33,5 +32,13 @@ public class Course {
 
     public String getName() {
         return name;
+    }
+
+    public Student getStudent() {
+        return student;
+    }
+
+    public void setStudent(Student student) {
+        this.student = student;
     }
 }

@@ -1,7 +1,7 @@
 package com.example.crud.persistence.mapping;
 
-import com.example.crud.persistence.enteties.Course;
+import com.example.crud.persistence.enteties.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface CourseRepository extends JpaRepository<Course,Integer> {
+public interface BookRepository extends JpaRepository<Book,Integer> {
 }
